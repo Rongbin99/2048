@@ -1,7 +1,7 @@
 @import url(//https://fonts.googleapis.com/css?family=Nunito);
 
 body {
-    background-color: mediumpurple;
+    background-color: #9370d8;
     font-family: "Nunito", sans-serif;
     font-size: 22px;
     line-height: normal;
@@ -15,11 +15,72 @@ hr {
     top: 10px;
     border: none;
     height: 2px;
-    background: white;
+    background: #ffffff;
     margin-bottom: 20px;
 }
 
 #board {
-    width: 75%;
-    height: 75%;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #b5c6cd;
+    border: 6px solid #a0acbb;
+}
+
+.tile {
+    width: 115px;
+    height: 115px;
+    border: 5px solid #a0acbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.t2 {
+
+}
+
+.t4 {
+
+}
+
+.t8 {
+
+}
+
+.t16 {
+
+}
+
+.t32 {
+
+}
+
+.t64 {
+
+}
+
+.t128 {
+
+}
+
+.t256 {
+
+}
+
+.t512 {
+
+}
+
+.t1024 {
+
+}
+
+.t2048 {
+    
 }
