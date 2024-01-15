@@ -1,0 +1,25 @@
+@import url(//https://fonts.googleapis.com/css?family=Nunito);
+
+body {
+    background-color: mediumpurple;
+    font-family: "Nunito", sans-serif;
+    font-size: 22px;
+    line-height: normal;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    top: 10px;
+    border: none;
+    height: 2px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+#board {
+    width: 75%;
+    height: 75%;
+}
