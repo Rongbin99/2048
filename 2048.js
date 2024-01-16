@@ -21,10 +21,12 @@ function startGame() {
             tile.id = r.toString() + "-" + c.toString();
             let number = board[r][c];
             updateTile(tile, number);
+            //returns board logic to HTML file
+            document.getElementById("game").append(tile);
         }
     }
 }
-
+//updates text and stlying of the tile
 function updateTile(tile, number) {
     tile.innertext = "";
     tile.classList.value = ""; //clears the class assigned
