@@ -43,3 +43,37 @@ function updateTile(tile, number) {
         }
     }
 }
+
+/*keyboard inputs for moving tiles around*/
+
+document.addEventListener("keyup", (a) => {
+    if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
+        moveLeft();
+    }
+    else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
+        moveRight();
+    }
+    else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
+        moveUp();
+    }
+    else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
+        moveDown();
+    }
+    updateScore();
+})
+
+function moveLeft() {
+
+}
+
+function moveRight() {
+    
+}
+
+function moveUp() {
+    
+}
+
+function moveDown() {
+    
+}
