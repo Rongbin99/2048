@@ -77,3 +77,9 @@ function moveUp() {
 function moveDown() {
     
 }
+
+
+//updates the score
+function updateScore() {
+
+}
