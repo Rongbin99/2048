@@ -40,17 +40,21 @@ hr {
     font-weight: bold;
 }
 
+/*colours for each tile*/
+
 .t2 {
     background-color: #eee4da;
     color: #727371;
 }
 
 .t4 {
-
+    background-color: #ece0ca;
+    color: #727371;
 }
 
 .t8 {
-
+    background-color: #f4b17a;
+    color: #ffffff;
 }
 
 .t16 {
