@@ -9,10 +9,10 @@ window.onload = function() {
 //initializes the board
 function startGame() {
     board = [
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0],
-        [0, 0, 0, 0]
+        [0, 2, 4, 0],
+        [0, 8, 64, 0],
+        [0, 0, 32, 0],
+        [16, 0, 0, 0]
     ];
 
     for (let r = 0; r < rows; r++) {
@@ -28,12 +28,12 @@ function startGame() {
 }
 //updates text and stlying of the tile
 function updateTile(tile, number) {
-    tile.innertext = "";
+    tile.innerText = "";
     tile.classList.value = ""; //clears the class assigned
     tile.classList.add("tile");
 
     if (number > 0) {
-        tile.innertext = number;
+        tile.innerText = number;
         
         if (number <= 4096) {
             tile.classList.add("t" + number.toString());
