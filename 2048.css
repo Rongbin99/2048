@@ -3,7 +3,7 @@
 body {
     background-color: #9370d8;
     font-family: "Nunito", sans-serif;
-    font-size: 22px;
+    font-size: 24px;
     line-height: normal;
     font-weight: bold;
     padding: 5px;
@@ -12,7 +12,6 @@ body {
 
 hr {
     position: relative;
-    top: 10px;
     border: none;
     height: 2px;
     background: #ffffff;
@@ -42,7 +41,8 @@ hr {
 }
 
 .t2 {
-
+    background-color: #eee4da;
+    color: #727371;
 }
 
 .t4 {
