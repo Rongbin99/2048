@@ -1,3 +1,4 @@
+//initializing global variables
 var board;
 var score = 0;
 var rows = 4;
@@ -63,7 +64,7 @@ document.addEventListener("keyup", (a) => {
 })
 
 function moveLeft() {
-
+    
 }
 
 function moveRight() {
