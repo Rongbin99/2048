@@ -141,5 +141,7 @@ function shift(row) {
 
 //updates the score
 function updateScore() {
-
+    document.getElementById("score").remove(score);
+    document.getElementById("score").append(score);
+//    document.getElementById("score").replaceWith(score);
 }
