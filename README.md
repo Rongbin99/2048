@@ -9,3 +9,4 @@ The popular 2048 game, programmed in JS
 - [ ] Write this MD
 - [ ] Add sliding animations for smoothness
 - [ ] make so that only spawns a new 2 when there's board movement
+- [ ] add Game Over screen
