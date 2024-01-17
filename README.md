@@ -7,3 +7,4 @@ The popular 2048 game, programmed in JS
 - [ ] Make into Android app
 - [ ] Make it Genshin themed???
 - [ ] Write this MD
+- [ ] Add sliding animations for smoothness
