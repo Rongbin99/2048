@@ -64,7 +64,11 @@ document.addEventListener("keyup", (a) => {
 })
 
 function moveLeft() {
-    
+    for (let r = 0; r < rows; r++) {
+        let row = board[r];
+        row = shift(row);
+        board[r] = row;
+    }
 }
 
 function moveRight() {
@@ -77,6 +81,10 @@ function moveUp() {
 
 function moveDown() {
     
+}
+
+function shift() {
+
 }
 
 //updates the score
