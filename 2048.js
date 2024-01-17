@@ -10,10 +10,10 @@ window.onload = function() {
 //initializes the board
 function startGame() {
     board = [
-        [2, 2, 4, 0],
-        [0, 8, 64, 0],
-        [0, 0, 32, 0],
-        [16, 0, 0, 0]
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
     ];
 
     for (let r = 0; r < rows; r++) {
@@ -26,6 +26,42 @@ function startGame() {
             document.getElementById("game").append(tile);
         }
     }
+    //places 2 2's on the board to begin
+    spawnTwo();
+    spawnTwo();
+}
+//places a 2 on the board randomly
+function spawnTwo() {
+    if (boardFull()) {
+        return; //do nothing
+    }
+  
+    let empty = true;
+    while (empty) {
+        let r = Math.floor(Math.random() * rows);
+        let c = Math.floor(Math.random() * columns);
+        //if that spot is empty
+        if (board[r][c] == 0) {
+            board[r][c] = 2;
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            let number = board[r][c];
+            updateTile(tile, number);
+            
+            empty = false;
+        }
+    }
+
+}
+//checks if the board is fully occupied
+function boardFull() {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] == 0) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 //updates text and stlying of the tile
 function updateTile(tile, number) {
@@ -50,15 +86,19 @@ function updateTile(tile, number) {
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
         moveLeft();
+        spawnTwo();
     }
     else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
         moveRight();
+        spawnTwo();
     }
     else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
         moveUp();
+        spawnTwo();
     }
     else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
         moveDown();
+        spawnTwo();
     }
     updateScore();
 })
