@@ -1,5 +1,6 @@
 //initializing global variables
 var board;
+var boardcopy;
 var score = 0;
 var rows = 4;
 var columns = 4;
@@ -32,7 +33,7 @@ function startGame() {
 }
 //places a 2 on the board randomly
 function spawnTwo() {
-    if (boardFull()) {
+    if (boardFull() || (board == boardcopy)) {
         return; //do nothing
     }
   
@@ -80,11 +81,23 @@ function updateTile(tile, number) {
         }
     }
 }
+//updates the boardcopy
+function updateBoardcopy() {
+    boardcopy = [];
+    for (let r = 0; r < rows; r++) {
+        let rowcopy = [];
+        for (let c = 0; c < columns; c++) {
+            rowcopy.push(board[r][c]);
+        }
+        boardcopy.push(rowcopy);
+    }
+}
 
 /*keyboard inputs for moving tiles around*/
 
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
+        updateBoardcopy();
         moveLeft();
         spawnTwo();
     }
