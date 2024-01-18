@@ -1,6 +1,5 @@
 //initializing global variables
 var board;
-var boardChanged = false;
 var score = 0;
 const rows = 4;
 const columns = 4;
@@ -55,7 +54,7 @@ function spawnTwo() {
 }
 //checks if game is lost
 function gameLost() {
-    if (!possibleMovesCheck()) {
+    if (!possibleMovesCheck()) {//if no more moves, must be lost
         coverScreen.classList.remove("hide");
         result.innerText = "Score: " + score.toString();
     }
@@ -95,27 +94,19 @@ function updateTile(tile, number) {
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
         moveLeft();
-        if (boardChanged) {
-            spawnTwo();
-        }
+        spawnTwo();
     }
     else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
         moveRight();
-        if (boardChanged) {
-            spawnTwo();
-        }
+        spawnTwo();
     }
     else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
         moveUp();
-        if (boardChanged) {
-            spawnTwo();
-        }
+        spawnTwo();
     }
     else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
         moveDown();
-        if (boardChanged) {
-            spawnTwo();
-        }
+        spawnTwo();
     }
     updateScore();
 });
@@ -238,16 +229,16 @@ function possibleMovesCheck() {
 //button function
 replayButton.addEventListener("click", () => {
     coverScreen.classList.add("hide");
-    score = 0;
-    updateScore();
+    score = 0;//resets score
+    updateScore();//resets score being shown
 
-    board = [
+    board = [//resets board
         [0, 0, 0, 0],
         [0, 0, 0, 0],
         [0, 0, 0, 0],
         [0, 0, 0, 0]
     ];
-
+    //resets the classes and text of the tiles to default
     for (let r = 0; r < rows; r++) {
         for (let c = 0; c < columns; c++) {
             let tile = document.getElementById(r.toString() + "-" + c.toString());
@@ -255,7 +246,7 @@ replayButton.addEventListener("click", () => {
             updateTile(tile, number);
         }
     }
-
+    //spawn 2 tiles to begin game
     spawnTwo();
     spawnTwo();
 });
