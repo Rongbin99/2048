@@ -22,22 +22,23 @@
             <p id="result"></p>
             <button type="button" id="replayButton">Play Again</button>
         </div>
+        <!-- Theme Selector -->
+        <div id="container" class="container">
+            <div class="dropdown">
+                <button>Select Theme</button>
+                <div class="dropdown-content hide">
+                    <a onclick="document.getElementById('theme').href = 'original.css'">Original</a>
+                    <a onclick="document.getElementById('theme').href = '2048.css'">Purple!</a>
+                    <a onclick="document.getElementById('theme').href = 'genshin.css'">Genshin Impact</a>
+                </div>
+            </div>
+        </div>
         <!-- Bottom Ribbon-->
         <div id="bottom" class="bottom">
             <p align="center">Made by Rongbin99 
                 <a href="https://www.linkedin.com/in/rongbin99/" target="_blank"><img style="margin-bottom: -5px" src="assets/LI-In-Bug.png" alt="LinkedIn" height="25" /></a>
                 <a href="https://twitter.com/rongbin99" target="_blank"><img style="margin-bottom: -5px" src="assets/sl_z_072523_61700_01.jpg" alt="X / Twitter" height="25" /></a>
-                <a href="https://github.com/Rongbin99/2048" target="_blank"><img style="margin-bottom: -5px" src="assets/GitHub-Symbol.png" alt="GitHub" height="25" /></a>
-            </p>
-        </div>
-
-        <!-- Theme Selector -->
-        <div id="container" class="container">
-            <p>Theme: <select onchange="document.getElementById('theme').href = this.value;">
-                    <option value="2048.css">Purple!</option>
-                    <option value="original.css">Original</option>
-                    <option value="genshin.css">Genshin Impact</option>
-                    </select>
+                <a href="https://github.com/Rongbin99/2048" target="_blank"><img style="margin-bottom: -5px; margin-left: -5px;" src="assets/GitHub-Symbol.png" alt="GitHub" height="25" /></a>
             </p>
         </div>
         <!-- JS Linking -->
