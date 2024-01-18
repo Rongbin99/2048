@@ -1,0 +1,151 @@
+@import url(//https://fonts.googleapis.com/css?family=Nunito); /*importing font from Google*/
+
+body {
+    background-color: #fef6ff;
+    font-family: "Nunito", sans-serif;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    border: none;
+    height: 2px;
+    background: #000000;
+    margin-bottom: 20px;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #cdc1b5;
+    border: 6px solid #bbada0;
+    border-radius: 0.5em;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 80%;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0em;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fef6ff;
+}
+
+#replayButton {
+    font-family: "Nunito", sans-serif;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+
+    background-color: #084dce;
+}
+
+.hide {
+    display: none;
+}
+
+.tile {
+    width: 115px;
+    height: 115px;
+    border: 5px solid #bbada0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/*colours for each tile*/
+
+.t2 {
+    background-color: #eee4da;
+    color: #727371;
+}
+
+.t4 {
+    background-color: #ece0ca;
+    color: #727371;
+}
+
+.t8 {
+    background-color: #f4b17a;
+    color: #ffffff;
+}
+
+.t16 {
+    background-color: #f59575;
+    color: #ffffff;
+}
+
+.t32 {
+    background-color: #f57c5f;
+    color: #ffffff;
+}
+
+.t64 {
+    background-color: #f65d3b;
+    color: #ffffff;
+}
+
+.t128 {
+    background-color: #edce71;
+    color: #ffffff;
+}
+
+.t256 {
+    background-color: #edcc63;
+    color: #ffffff;
+}
+
+.t512 {
+    background-color: #edc651;
+    color: #ffffff;
+}
+
+.t1024 {
+    background-color: #eec744;
+    color: #ffffff;
+}
+
+.t2048 {
+    background-color: #ecc230;
+    color: #ffffff;
+}
+
+.t4096 {
+    background-color: #fe3d3d;
+    color: #ffffff;
+}
+
+.t8192 {
+    background-color: #ff2020;
+    color: #ffffff;
+}
