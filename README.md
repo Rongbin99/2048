@@ -5,7 +5,7 @@ The popular 2048 game, programmed in JS
 ## TODO
 
 - [X] Finish following YT guide
-- [ ] Personalise
+- [X] Personalise
 - [ ] Make into Android app
 - [ ] Make it Genshin themed???
 - [ ] Write this MD
