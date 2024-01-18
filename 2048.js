@@ -223,3 +223,11 @@ function shift(row) {
 function updateScore() {
     document.getElementById("score").innerText = score;
 }
+
+/*cover screen stuff*/
+
+const replayButton = document.getElementById("play-again");
+const coverScreen = document.querySelector(".cover-screen");
+const result = document.getElementById("result");
+
+

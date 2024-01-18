@@ -27,6 +27,49 @@ hr {
 
     background-color: #b5c6cd;
     border: 6px solid #a0acbb;
+    border-radius: 0.5em;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 80%;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0em;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #9370d8;
+}
+
+#play-again {
+    font-family: "Nunito", sans-serif;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+
+    background-color: #4a08ce;
+}
+
+.hide {
+    display: none;
 }
 
 .tile {
