@@ -6,11 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale:1.0" />
         <link rel="stylesheet" href="2048.css" id="theme">
 
-        <title>2048: By Rongbin99</title>
+        <title>2048, but Different</title>
     </head>
 
     <body>
-        <h1>2048: By Rongbin99</h1>
+        <h1>2048, but Different</h1>
         <hr>
         <h2>Score:
             <span id="score">0</span>
@@ -24,21 +24,21 @@
         </div>
         <!-- Bottom Ribbon-->
         <div id="bottom" class="bottom">
-            <p align="center">Made by Rongbin99
-                <a href="https://www.linkedin.com/in/rongbin99/" target="_blank"><img style="margin: 10px" src="https://github.com/Rongbin99/Rongbin99/blob/main/assets/LI-In-Bug.png" alt="LinkedIn" height="50" /></a>
-                <a href="https://twitter.com/rongbin99" target="_blank"><img style="margin: 10px" src="https://github.com/Rongbin99/Rongbin99/blob/main/assets/sl_z_072523_61700_01.jpg" alt="X / Twitter" height="50" /></a>
-                <a href="https://github.com/Rongbin99/2048" target="_blank"><img style="margin: 10px" src="" alt="GitHub" height="50" /></a>
+            <p align="center">Made by Rongbin99 
+                <a href="https://www.linkedin.com/in/rongbin99/" target="_blank"><img style="margin-bottom: -5px" src="assets/LI-In-Bug.png" alt="LinkedIn" height="25" /></a>
+                <a href="https://twitter.com/rongbin99" target="_blank"><img style="margin-bottom: -5px" src="assets/sl_z_072523_61700_01.jpg" alt="X / Twitter" height="25" /></a>
+                <a href="https://github.com/Rongbin99/2048" target="_blank"><img style="margin-bottom: -5px" src="assets/GitHub-Symbol.png" alt="GitHub" height="25" /></a>
             </p>
         </div>
 
         <!-- Theme Selector -->
         <div id="container" class="container">
-            <p>Theme: </p>
-            <select onchange="document.getElementById('theme').href = this.value;">
-                <option value="2048.css">Purple!</option>
-                <option value="original.css">Original</option>
-                <option value="genshin.css">Genshin Impact</option>
-            </select>
+            <p>Theme: <select onchange="document.getElementById('theme').href = this.value;">
+                    <option value="2048.css">Purple!</option>
+                    <option value="original.css">Original</option>
+                    <option value="genshin.css">Genshin Impact</option>
+                    </select>
+            </p>
         </div>
         <!-- JS Linking -->
         <script defer src="2048.js"></script>
