@@ -56,6 +56,8 @@ function spawnTwo() {
 function gameLost() {
     if (!possibleMovesCheck()) {//if no more moves, must be lost
         coverScreen.classList.remove("hide");
+        bottom.classList.add("hide");
+        container.classList.add("hide");
         result.innerText = "Score: " + score.toString();
     }
 }
@@ -197,6 +199,8 @@ function updateScore() {
 let replayButton = document.getElementById("replayButton");
 let coverScreen = document.getElementById("coverScreen");
 let result = document.getElementById("result");
+let bottom = document.getElementById("bottom");
+let container = document.getElementById("container");
 //checks adjacent tiles for matches
 function adjacentCheck(arr) {
     for (let i = 0; i < arr.length-1; i++) {
@@ -229,6 +233,8 @@ function possibleMovesCheck() {
 //button function
 replayButton.addEventListener("click", () => {
     coverScreen.classList.add("hide");
+    bottom.classList.remove("hide");
+    container.classList.remove("hide");
     score = 0;//resets score
     updateScore();//resets score being shown
 
