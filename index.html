@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale:1.0" />
-        <link rel="stylesheet" href="2048.css">
+        <link rel="stylesheet" href="2048.css" id="theme">
 
         <title>2048: By Rongbin99</title>
     </head>
@@ -16,12 +16,31 @@
             <span id="score">0</span>
         </h2>
         <div id="game"></div>
-
+        <!-- Game Over Screen Overlay -->
         <div id="coverScreen" class="cover-screen hide">
             <h3 id="game-over">Game Over</h3>
             <p id="result"></p>
             <button type="button" id="replayButton">Play Again</button>
         </div>
+        <!-- Bottom Ribbon-->
+        <div id="bottom" class="bottom">
+            <p align="center">Made by Rongbin99
+                <a href="https://www.linkedin.com/in/rongbin99/" target="_blank"><img style="margin: 10px" src="https://github.com/Rongbin99/Rongbin99/blob/main/assets/LI-In-Bug.png" alt="LinkedIn" height="50" /></a>
+                <a href="https://twitter.com/rongbin99" target="_blank"><img style="margin: 10px" src="https://github.com/Rongbin99/Rongbin99/blob/main/assets/sl_z_072523_61700_01.jpg" alt="X / Twitter" height="50" /></a>
+                <a href="https://github.com/Rongbin99/2048" target="_blank"><img style="margin: 10px" src="" alt="GitHub" height="50" /></a>
+            </p>
+        </div>
+
+        <!-- Theme Selector -->
+        <div id="container" class="container">
+            <p>Theme: </p>
+            <select onchange="document.getElementById('theme').href = this.value;">
+                <option value="2048.css">Purple!</option>
+                <option value="original.css">Original</option>
+                <option value="genshin.css">Genshin Impact</option>
+            </select>
+        </div>
+        <!-- JS Linking -->
         <script defer src="2048.js"></script>
     </body>
 </html>
