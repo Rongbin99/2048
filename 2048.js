@@ -1,9 +1,9 @@
 //initializing global variables
 var board;
-var copyBoard;
+var boardChanged = false;
 var score = 0;
-var rows = 4;
-var columns = 4;
+const rows = 4;
+const columns = 4;
 //starting function
 window.onload = function() {
     startGame();
@@ -33,7 +33,8 @@ function startGame() {
 }
 //places a 2 on the board randomly
 function spawnTwo() {
-    if (boardFull() || (board == copyBoard)) {
+    if (boardFull()) {
+        gameLost();
         return; //do nothing
     }
   
@@ -54,24 +55,9 @@ function spawnTwo() {
 }
 //checks if game is lost
 function gameLost() {
-    let boardcopy = getBoardcopy();
-    moveDown();
-    moveUp();
-    moveLeft();
-    moveRight();
-    if (boardFull()) {
-        return true;
-    }
-    else {
-        board = [];
-        for (let r = 0; r < rows; r++) {
-            let rowcopy = [];
-            for (let c = 0; c < columns; c++) {
-                rowcopy.push(boardcopy[r][c]);
-            }
-            board.push(rowcopy);
-        }
-        return false;
+    if (!possibleMovesCheck()) {
+        coverScreen.classList.remove("hide");
+        result.innerText = "Score: " + score.toString();
     }
 }
 
@@ -103,45 +89,36 @@ function updateTile(tile, number) {
         }
     }
 }
-//updates the boardcopy
-function getBoardcopy() {
-    let boardcopy = [];
-    for (let r = 0; r < rows; r++) {
-        let rowcopy = [];
-        for (let c = 0; c < columns; c++) {
-            rowcopy.push(board[r][c]);
-        }
-        boardcopy.push(rowcopy);
-    }
-    return boardcopy;
-}
 
 /*keyboard inputs for moving tiles around*/
 
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
-        copyBoard = getBoardcopy();
         moveLeft();
-        spawnTwo();
+        if (boardChanged) {
+            spawnTwo();
+        }
     }
     else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
-        copyBoard = getBoardcopy();
         moveRight();
-        spawnTwo();
+        if (boardChanged) {
+            spawnTwo();
+        }
     }
     else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
-        copyBoard = getBoardcopy();
         moveUp();
-        spawnTwo();
+        if (boardChanged) {
+            spawnTwo();
+        }
     }
     else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
-        copyBoard = getBoardcopy();
         moveDown();
-        spawnTwo();
+        if (boardChanged) {
+            spawnTwo();
+        }
     }
     updateScore();
-//    gameLost();
-})
+});
 
 function moveLeft() {
     for (let r = 0; r < rows; r++) {
@@ -226,8 +203,59 @@ function updateScore() {
 
 /*cover screen stuff*/
 
-const replayButton = document.getElementById("play-again");
-const coverScreen = document.querySelector(".cover-screen");
-const result = document.getElementById("result");
+let replayButton = document.getElementById("replayButton");
+let coverScreen = document.getElementById("coverScreen");
+let result = document.getElementById("result");
+//checks adjacent tiles for matches
+function adjacentCheck(arr) {
+    for (let i = 0; i < arr.length-1; i++) {
+        if (arr[i] == arr[i+1]) {
+            return true;
+        }
+    }
+    return false;
+}
+//checks for possible moves
+function possibleMovesCheck() {
+    //checks in rows
+    for (let r in board) {
+        if (adjacentCheck(board[r])) {
+            return true;
+        }
+    }
+    //checks in columns
+    for (let c = 0; c < columns; c++) {
+        let columarray = [];
+        for (let r = 0; r < rows; r++) {
+            columarray.push(board[r][c]);
+        }
+        if (adjacentCheck(columarray)) {
+            return true;
+        }
+    }
+    return false;
+}
+//button function
+replayButton.addEventListener("click", () => {
+    coverScreen.classList.add("hide");
+    score = 0;
+    updateScore();
 
+    board = [
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ];
 
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            let number = board[r][c];
+            updateTile(tile, number);
+        }
+    }
+
+    spawnTwo();
+    spawnTwo();
+});
