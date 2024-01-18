@@ -3,9 +3,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale:1.0">
+        <meta name="viewport" content="width=device-width, initial-scale:1.0" />
         <link rel="stylesheet" href="2048.css">
-        <script src="2048.js"></script>
 
         <title>2048: By Rongbin99</title>
     </head>
@@ -13,8 +12,16 @@
     <body>
         <h1>2048: By Rongbin99</h1>
         <hr>
-        <h2>Score: <span id="score">0</span></h2>
-
+        <h2>Score:
+            <span id="score">0</span>
+        </h2>
         <div id="game"></div>
+
+        <div id="coverScreen" class="cover-screen hide">
+            <h3 id="game-over">Game Over</h3>
+            <p id="result"></p>
+            <button type="button" id="replayButton">Play Again</button>
+        </div>
+        <script defer src="2048.js"></script>
     </body>
 </html>

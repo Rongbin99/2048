@@ -1,8 +1,8 @@
 //initializing global variables
 var board;
 var score = 0;
-var rows = 4;
-var columns = 4;
+const rows = 4;
+const columns = 4;
 //starting function
 window.onload = function() {
     startGame();
@@ -33,6 +33,7 @@ function startGame() {
 //places a 2 on the board randomly
 function spawnTwo() {
     if (boardFull()) {
+        gameLost();
         return; //do nothing
     }
   
@@ -50,8 +51,15 @@ function spawnTwo() {
             empty = false;
         }
     }
-
 }
+//checks if game is lost
+function gameLost() {
+    if (!possibleMovesCheck()) {//if no more moves, must be lost
+        coverScreen.classList.remove("hide");
+        result.innerText = "Score: " + score.toString();
+    }
+}
+
 //checks if the board is fully occupied
 function boardFull() {
     for (let r = 0; r < rows; r++) {
@@ -101,7 +109,7 @@ document.addEventListener("keydown", (a) => {
         spawnTwo();
     }
     updateScore();
-})
+});
 
 function moveLeft() {
     for (let r = 0; r < rows; r++) {
@@ -183,3 +191,62 @@ function shift(row) {
 function updateScore() {
     document.getElementById("score").innerText = score;
 }
+
+/*cover screen stuff*/
+
+let replayButton = document.getElementById("replayButton");
+let coverScreen = document.getElementById("coverScreen");
+let result = document.getElementById("result");
+//checks adjacent tiles for matches
+function adjacentCheck(arr) {
+    for (let i = 0; i < arr.length-1; i++) {
+        if (arr[i] == arr[i+1]) {
+            return true;
+        }
+    }
+    return false;
+}
+//checks for possible moves
+function possibleMovesCheck() {
+    //checks in rows
+    for (let r in board) {
+        if (adjacentCheck(board[r])) {
+            return true;
+        }
+    }
+    //checks in columns
+    for (let c = 0; c < columns; c++) {
+        let columarray = [];
+        for (let r = 0; r < rows; r++) {
+            columarray.push(board[r][c]);
+        }
+        if (adjacentCheck(columarray)) {
+            return true;
+        }
+    }
+    return false;
+}
+//button function
+replayButton.addEventListener("click", () => {
+    coverScreen.classList.add("hide");
+    score = 0;//resets score
+    updateScore();//resets score being shown
+
+    board = [//resets board
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]
+    ];
+    //resets the classes and text of the tiles to default
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            let number = board[r][c];
+            updateTile(tile, number);
+        }
+    }
+    //spawn 2 tiles to begin game
+    spawnTwo();
+    spawnTwo();
+});
