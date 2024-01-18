@@ -1,4 +1,4 @@
-@import url(//https://fonts.googleapis.com/css?family=Nunito); /*importing font from Google*/
+@import url(https://fonts.googleapis.com/css?family=Nunito); /*importing font from Google*/
 
 body {
     background-color: #9370d8;
@@ -70,6 +70,17 @@ h3 {
 
 .hide {
     display: none;
+}
+
+.bottom {
+    font-size: 1em;
+    font-weight: normal;
+    scale: 70%;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .tile {
