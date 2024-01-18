@@ -1,5 +1,217 @@
 /*import genshin ttf*/
 
 body {
-    background-image: image();
+    background-image: url("https://64.media.tumblr.com/6f9caf4cd1d8462458525628d536ff52/77e7bffc4d48a435-58/s640x960/46e09c1388b79b2bdffd3b5bac429fa7de3ccc78.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "", sans-serif;
+    font-size: 24px;
+    line-height: normal;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: center;
+}
+
+hr {
+    position: relative;
+    border: none;
+    height: 2px;
+    background: #ffffff;
+    margin-bottom: 20px;
+}
+
+#game {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #b5c6cd;
+    border: 6px solid #a0acbb;
+    border-radius: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 80%;
+}
+
+h3 {
+    font-size: 3em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0em;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #9370d8;
+}
+
+#replayButton {
+    font-family: "Nunito", sans-serif;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+
+    background-color: #4a08ce;
+}
+
+.hide {
+    display: none;
+}
+
+.bottom {
+    font-size: 1em;
+    font-weight: normal;
+    scale: 70%;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin-bottom: -30px;
+    padding: 1em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    padding: 0.7em 1.5em;
+    font-size: 0.7em;
+    border: none;
+    border-radius: 0.6em;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+
+    background-color: #080808;
+    color: #ffffff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    background-color: rgba(238, 177, 197, 0.95);
+    border-radius: 0.6em;
+}
+
+.dropdown-content a {
+    padding: 0.7em 1.5em;
+    text-decoration: none;
+    display: block;
+
+    color: #000000;
+    font-size: 0.7em;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 0.6em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    bottom: 100%;
+}
+
+.tile {
+    width: 115px;
+    height: 115px;
+    border: 5px solid #a0acbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/*colours for each tile*/
+
+.t2 {
+    background-color: #4cc9f0;
+    color: #000000;
+}
+
+.t4 {
+    background-color: #05b2dc;
+    color: #000000;
+}
+
+.t8 {
+    background-color: #4895ef;
+    color: #000000;
+}
+
+.t16 {
+    background-color: #4361ee;
+    color: #000000;
+}
+
+.t32 {
+    background-color: #3f37c9;
+    color: #ffffff;
+}
+
+.t64 {
+    background-color: #3a0ca3;
+    color: #ffffff;
+}
+
+.t128 {
+    background-color: #480ca8;
+    color: #ffffff;
+}
+
+.t256 {
+    background-color: #560bad;
+    color: #ffffff;
+}
+
+.t512 {
+    background-color: #7209b7;
+    color: #ffffff;
+}
+
+.t1024 {
+    background-color: #b5179e;
+    color: #ffffff;
+}
+
+.t2048 {
+    background-color: #f72585;
+    color: #000000;
+}
+
+.t4096 {
+    background-color: #f26a8d;
+    color: #000000;
+}
+
+.t8192 {
+    background-color: #f49cbb;
+    color: #000000;
 }
