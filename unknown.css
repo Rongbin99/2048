@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
 body {
-    background-image: url("assets/colorful.gif");
+    background-image: url("assets/Wallpaper8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     font-family: "Nunito", sans-serif;
@@ -59,6 +59,9 @@ h3 {
     justify-content: center;
     align-items: center;
 
+    background-image: url("assets/yelan.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #000000;
 }
 
