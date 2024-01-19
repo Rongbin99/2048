@@ -12,6 +12,7 @@ body {
 
 hr {
     position: relative;
+    display: none;
     border: none;
     height: 2px;
     background: #000000;
@@ -55,6 +56,10 @@ h3 {
     align-items: center;
 
     background-color: #fef6ff;
+}
+
+.secret {
+    display: none;
 }
 
 #replayButton {
