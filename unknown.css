@@ -14,15 +14,6 @@ body {
     color: #ffffff;
 }
 
-hr {
-    position: relative;
-    display: none;
-    border: none;
-    height: 2px;
-    background: #ffffff;
-    margin-bottom: 20px;
-}
-
 #game {
     width: 500px;
     height: 500px;
@@ -63,6 +54,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #000000;
+    color: #000000;
 }
 
 .secret {
@@ -74,7 +66,7 @@ h3 {
 }
 
 .secret a {
-    color: #ff0000;
+    color: #ffffff;
 }
 
 #replayButton {

@@ -10,15 +10,6 @@ body {
     text-align: center;
 }
 
-hr {
-    position: relative;
-    display: none;
-    border: none;
-    height: 2px;
-    background: #ffffff;
-    margin-bottom: 20px;
-}
-
 #game {
     width: 500px;
     height: 500px;

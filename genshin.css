@@ -23,16 +23,7 @@ body {
     padding: 5px;
     text-align: center;
 
-    color: #ffffff;
-}
-
-hr {
-    position: relative;
-    display: none;
-    border: none;
-    height: 2px;
-    background: #ffffff;
-    margin-bottom: 20px;
+    color: #000000;
 }
 
 #game {
@@ -43,7 +34,7 @@ hr {
     flex-wrap: wrap;
 
     background-color: #b5c6cd;
-    border: 6px solid #00515f;
+    border: 6px solid #424242;
     border-radius: 0.5em;
 }
 
@@ -75,6 +66,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #ffd8d8;
+    color: #ffffff;
 }
 
 .secret {
@@ -167,7 +159,7 @@ h3 {
 .tile {
     width: 115px;
     height: 115px;
-    border: 5px solid #00515f;
+    border: 5px solid #424242;
     display: flex;
     justify-content: center;
     align-items: center;
