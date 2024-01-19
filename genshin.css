@@ -1,10 +1,22 @@
-/*import genshin ttf*/
+/*genshin font importing*/
+@font-face {
+    font-family: 'SDK_JP_Web';
+    src: url('assets/SDK_JP_Web-Heavy.eot');
+    src: url('assets/SDK_JP_Web-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('assets/SDK_JP_Web-Heavy.woff2') format('woff2'),
+        url('assets/SDK_JP_Web-Heavy.woff') format('woff'),
+        url('assets/SDK_JP_Web-Heavy.ttf') format('truetype'),
+        url('assets/SDK_JP_Web-Heavy.svg#SDK_JP_Web-Heavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 body {
     background-image: url("https://64.media.tumblr.com/6f9caf4cd1d8462458525628d536ff52/77e7bffc4d48a435-58/s640x960/46e09c1388b79b2bdffd3b5bac429fa7de3ccc78.gif");
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: "", sans-serif;
+    font-family: "SDK_JP_Web", sans-serif;
     font-size: 24px;
     line-height: normal;
     font-weight: bolder;
@@ -56,7 +68,7 @@ h3 {
     justify-content: center;
     align-items: center;
 
-    background-color: #9370d8;
+    background-image: url("");
 }
 
 #replayButton {
@@ -71,6 +83,10 @@ h3 {
     background-color: #4a08ce;
 }
 
+#replayButton:hover {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
@@ -78,7 +94,7 @@ h3 {
 .bottom {
     font-size: 1em;
     font-weight: normal;
-    scale: 70%;
+    transform: scale(0.8);
 
     text-align: center;
     align-items: center;
