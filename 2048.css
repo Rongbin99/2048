@@ -69,6 +69,10 @@ h3 {
     background-color: #4a08ce;
 }
 
+#replayButton:hover {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
@@ -76,7 +80,7 @@ h3 {
 .bottom {
     font-size: 1em;
     font-weight: normal;
-    scale: 70%;
+    transform: scale(0.8);
 
     text-align: center;
     align-items: center;
