@@ -7,9 +7,9 @@ The popular 2048 game, programmed in JS
 - [X] Finish following YT guide
 - [X] Personalise
 - [ ] Make into Android app
-- [ ] Make it Genshin themed???
+- [X] Make it Genshin themed???
 - [ ] Write this MD
 - [ ] Add sliding animations for smoothness
 - [ ] make so that only spawns a new 2 when there's board movement
 - [X] add Game Over screen
-- [ ] figure out how to add drop down to select theme (will change CSS source)
+- [X] figure out how to add drop down to select theme (will change CSS source)
