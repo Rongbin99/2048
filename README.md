@@ -1,8 +1,15 @@
-# 2048
+# 2048, but Different
 
-The popular 2048 game, programmed in JS
+The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript (JS) by Rongbin99.
 
-## TODO
+### [Play it here!](https://rongbin99.github.io/2048/)
+
+## Preview
+
+![]()
+
+
+## Future Patch Notes (TODO)
 
 - [ ] Make into Android app
 - [ ] Add sliding animation of tiles for smoothness
