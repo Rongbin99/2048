@@ -2,11 +2,16 @@
 
 The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript (JS) by Rongbin99.
 
-### [Play it here!](https://rongbin99.github.io/2048/)
+<div align="center">
+
+#### [PLAY IT HERE](https://rongbin99.github.io/2048/)
+
+</div>
 
 ## Preview
 
-![]()
+![Preview]()
+![Themes]()
 
 
 ## Future Patch Notes (TODO)
