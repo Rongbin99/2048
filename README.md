@@ -4,13 +4,19 @@ The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), progra
 
 <div align="center">
 
-### [PLAY IT HERE](https://rongbin99.github.io/2048/)
+### ➡️ [PLAY IT HERE](https://rongbin99.github.io/2048/) ⬅️
 
 </div>
 
 ## Preview
 
 ![Preview](https://github.com/Rongbin99/2048/blob/main/assets/preview-01.png)
+
+Available themes (for now):
+- 2048 Original
+- Purple - Blue
+- Genshin Impact 💀
+
 ![Themes](https://github.com/Rongbin99/2048/blob/main/assets/themes-01.png)
 
 > [!NOTE]
