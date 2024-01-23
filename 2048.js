@@ -96,17 +96,20 @@ function updateTile(tile, number) {
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
         moveLeft();
+        spawnTwo();
     }
     else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
         moveRight();
+        spawnTwo();
     }
     else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
         moveUp();
+        spawnTwo();
     }
     else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
         moveDown();
+        spawnTwo();
     }
-    spawnTwo();
     updateScore();
 });
 
@@ -258,8 +261,8 @@ replayButton.addEventListener("click", () => {
 //touch event variables
 var touchStartX, touchStartY;
 //touch listeners
-document.getElementById("gane").addEventListener("touchstart", handleTouchStart, false);
-document.getElementById("gane").addEventListener("touchmove", handleTouchMove, false);
+document.getElementById("game").addEventListener("touchstart", handleTouchStart, false);
+document.getElementById("game").addEventListener("touchmove", handleTouchMove, false);
 
 function handleTouchStart(event) {//setting initial touch position
     touchStartX = event.touches[0].clientX;
@@ -280,24 +283,27 @@ function handleTouchMove(event) {
         if (Math.abs(dX) > Math.abs(dY)) {//X movement > than Y
             if (dX > 0) {
                 moveRight(); //swipe right
+                spawnTwo();
             }
             else {
                 moveLeft(); //swipe left
+                spawnTwo();
             }
         }
         else if (Math.abs(dX) < Math.abs(dY)) {//otherwise, must be Y movement
             if (dY > 0) {
                 moveDown(); //swipe down
+                spawnTwo();
             }
             else {
                 moveUp(); //swipe up
+                spawnTwo();
             }
         }
         //update starting touch positions to reset
         touchStartX = touchEndX;
         touchStartY = touchEndY;
 
-        spawnTwo();
         updateScore();
     }
 }
