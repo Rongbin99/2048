@@ -256,3 +256,48 @@ replayButton.addEventListener("click", () => {
     spawnTwo();
     spawnTwo();
 });
+
+/* touch movement controls */
+//touch event variables
+var touchStartX, touchStartY;
+//touch listeners
+document.getElementById("gane").addEventListener("touchstart", handleTouchStart, false);
+document.getElementById("gane").addEventListener("touchmove", handleTouchMove, false);
+
+function handleTouchStart(event) {//setting initial touch position
+    touchStartX = event.touches[0].clientX;
+    touchStartY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+    event.preventDefault();
+    //end movement variables and change in X, Y
+    var touchEndX = event.touches[0].clientX;
+    var touchEndY = event.touches[0].clientY;
+    var dX = touchEndX - touchStartX;
+    var dY = touchEndY - touchStartY;
+
+    //detecting touch movement thresholds
+    if ((Math.abs(dX) > 50) || (Math.abs(dY) > 50)) {//touchscreen deadzone
+        //determine direction of swipe
+        if (Math.abs(dX) > Math.abs(dY)) {//X movement > than Y
+            if (dX > 0) {
+                moveRight(); //swipe right
+            }
+            else {
+                moveLeft(); //swipe left
+            }
+        }
+        else if (Math.abs(dX) < Math.abs(dY)) {//otherwise, must be Y movement
+            if (dY > 0) {
+                moveDown(); //swipe down
+            }
+            else {
+                moveUp(); //swipe up
+            }
+        }
+        //update starting touch positions to reset
+        touchStartX = touchEndX;
+        touchStartY = touchEndY;
+    }
+}
