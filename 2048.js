@@ -278,7 +278,7 @@ function handleTouchMove(event) {
     var dY = touchEndY - touchStartY;
 
     //detecting touch movement thresholds
-    if ((Math.abs(dX) > 300) || (Math.abs(dY) > 300)) {//touchscreen deadzone
+    if ((Math.abs(dX) > 250) || (Math.abs(dY) > 250)) {//touchscreen deadzone
         //determine direction of swipe
         if (Math.abs(dX) > Math.abs(dY)) {//X movement > than Y
             if (dX > 0) {
