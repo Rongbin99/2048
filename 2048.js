@@ -95,21 +95,18 @@ function updateTile(tile, number) {
 
 document.addEventListener("keydown", (a) => {
     if ((a.code == "ArrowLeft") || (a.code == "KeyA")) {
-        moveLeft();
-        spawnTwo();
+        move("left");
     }
     else if ((a.code == "ArrowRight") || (a.code == "KeyD")) {
-        moveRight();
-        spawnTwo();
+        move("right");
     }
     else if ((a.code == "ArrowUp") || (a.code == "KeyW")) {
-        moveUp();
-        spawnTwo();
+        move("up");
     }
     else if ((a.code == "ArrowDown") || (a.code == "KeyS")) {
-        moveDown();
-        spawnTwo();
+        move("down");
     }
+    spawnTwo();
     updateScore();
 });
 
@@ -278,7 +275,7 @@ function handleTouchMove(event) {
     var dY = touchEndY - touchStartY;
 
     //detecting touch movement thresholds
-    if ((Math.abs(dX) > 50) || (Math.abs(dY) > 50)) {//touchscreen deadzone
+    if ((Math.abs(dX) > 10) || (Math.abs(dY) > 10)) {//touchscreen deadzone
         //determine direction of swipe
         if (Math.abs(dX) > Math.abs(dY)) {//X movement > than Y
             if (dX > 0) {
@@ -299,5 +296,25 @@ function handleTouchMove(event) {
         //update starting touch positions to reset
         touchStartX = touchEndX;
         touchStartY = touchEndY;
+
+        spawnTwo();
+        updateScore();
+    }
+}
+
+function move(direction) {
+    switch (direction) {
+        case "left":
+            moveLeft();
+            break;
+        case "right":
+            moveRight();
+            break;
+        case "up":
+            moveUp();
+            break;
+        case "down":
+            moveDown();
+            break;
     }
 }
