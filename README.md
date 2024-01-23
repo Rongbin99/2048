@@ -1,11 +1,11 @@
 # 2048, but Different
 
-The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript (JS) by Rongbin99. Available for download on Android. Playable on the web.
+The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript (JS) by Rongbin99. Available for download on Android, developed with (...). Playable on the web.
 
 <div align="center">
 
 ### ➡️ [PLAY IT HERE](https://rongbin99.github.io/2048/) ⬅️
-### ➡️ [ANDROID DOWNLOAD (SOON)](https://github.com/Rongbin99/2048/) ⬅️
+### ➡️ [ANDROID APK DOWNLOAD (SOON)](https://github.com/Rongbin99/2048/releases) ⬅️
 
 </div>
 
