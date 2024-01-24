@@ -7,6 +7,7 @@ Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://gith
 <div align="center">
 
 ### ➡️ [PLAY IT HERE](https://rongbin99.github.io/2048/) ⬅️
+
 ### ➡️ [ANDROID APK DOWNLOAD](https://github.com/Rongbin99/2048/releases/latest) ⬅️
 
 </div>
@@ -16,6 +17,7 @@ Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://gith
 ![Preview](https://github.com/Rongbin99/2048/blob/main/assets/preview-01.png)
 
 Available themes (for now):
+
 - 2048 Original
 - Purple - Blue
 - Genshin Impact 💀
@@ -30,11 +32,12 @@ Available themes (for now):
 If (for whatever reason) you have any questions or wish to contact me, feel free to reach out to me on Discord ([my Discord server link](discord.gg/3ExWbX2AXf)) or via email gu.rongbin99@gmail.com. *(serious inquires only pls)*
 
 ## Contributing
+
 Contributions are welcome, please create a new pull request for review. Contact me at __gu.rongbin99@gmail.com__ or __rongbin.gu@uwaterloo.ca__
 
 ## Future Patch Notes (TODO)
 
-- [X] Make into Android app (ik its shitty)
+- [ ] Make into Android app (ik its shitty) (update, idk how to build it lmao)
 - [ ] Add sliding animation of tiles for smoothness
 - [ ] Fix tile spawning issue [#11](https://github.com/Rongbin99/2048/issues/11)
 - [X] Add touchscreen movement support [#12](https://github.com/Rongbin99/2048/issues/12)
