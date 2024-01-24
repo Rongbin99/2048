@@ -1,11 +1,13 @@
 # 2048, but Different
 
-The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript (JS) by Rongbin99. Available for download on Android, developed with (...). Playable on the web.
+The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript ([Node.js](https://nodejs.org/en)) by Rongbin99. Available for download on Android by using the [Cordova](https://cordova.apache.org/) framework. Playable on the web anywhere.
+
+Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://github.com/Rongbin99/2048-cordova)
 
 <div align="center">
 
 ### ➡️ [PLAY IT HERE](https://rongbin99.github.io/2048/) ⬅️
-### ➡️ [ANDROID APK DOWNLOAD (SOON)](https://github.com/Rongbin99/2048/releases) ⬅️
+### ➡️ [ANDROID APK DOWNLOAD](https://github.com/Rongbin99/2048/releases/latest) ⬅️
 
 </div>
 
@@ -32,7 +34,8 @@ Contributions are welcome, please create a new pull request for review. Contact 
 
 ## Future Patch Notes (TODO)
 
-- [ ] Make into Android app
+- [X] Make into Android app (ik its shitty)
 - [ ] Add sliding animation of tiles for smoothness
 - [ ] Fix tile spawning issue [#11](https://github.com/Rongbin99/2048/issues/11)
 - [X] Add touchscreen movement support [#12](https://github.com/Rongbin99/2048/issues/12)
+- [ ] Optimize touch deadzone [#14](https://github.com/Rongbin99/2048/issues/14)
