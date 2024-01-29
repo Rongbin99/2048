@@ -1,14 +1,14 @@
 # 2048, but Different
 
-The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript ([Node.js](https://nodejs.org/en)) by Rongbin99. Available for download on Android by using the [Cordova](https://cordova.apache.org/) framework. Playable on the web anywhere.
+The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript ([Node.js](https://nodejs.org/en)) by Rongbin99. Playable on the web anywhere.
 
-Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://github.com/Rongbin99/2048-cordova)
+~~Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://github.com/Rongbin99/2048-cordova)~~
 
 <div align="center">
 
 ### ➡️ [PLAY IT HERE](https://rongbin99.github.io/2048/) ⬅️
 
-### ➡️ [ANDROID APK DOWNLOAD](https://github.com/Rongbin99/2048/releases/latest) ⬅️
+### ➡️ [~~ANDROID APK DOWNLOAD~~](https://github.com/Rongbin99/2048/releases/latest) ⬅️
 
 </div>
 
