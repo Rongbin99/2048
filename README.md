@@ -1,6 +1,6 @@
 # 2048, but Different
 
-The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript ([Node.js](https://nodejs.org/en)) by Rongbin99. Playable on the web anywhere.
+The popular [2048 game](https://en.wikipedia.org/wiki/2048_(video_game)), programmed in HTML/CSS and JavaScript by Rongbin99. Playable on the web anywhere.
 
 ~~Android App Repository: [https://github.com/Rongbin99/2048-cordova](https://github.com/Rongbin99/2048-cordova)~~
 
