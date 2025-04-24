@@ -69,10 +69,6 @@ h3 {
     color: #ffffff;
 }
 
-.secret {
-    display: none;
-}
-
 #replayButton {
     font-family: "SDK_JP_Web", sans-serif;
     padding: 1em 2em;

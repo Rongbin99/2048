@@ -57,18 +57,6 @@ h3 {
     color: #000000;
 }
 
-.secret {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1em;
-}
-
-.secret a {
-    color: #ffffff;
-}
-
 #replayButton {
     font-family: "Nunito", sans-serif;
     padding: 1em 2em;
