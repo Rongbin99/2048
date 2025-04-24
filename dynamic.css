@@ -1,0 +1,266 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito); /*importing font from Google*/
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: bolder;
+    padding: 5px;
+    text-align: center;
+    background: linear-gradient(90deg, #E0AAFF, #90E0EF);
+    background-size: 200% 200%;
+    animation: gradientAnimation 2s infinite linear;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(90deg, #5A189A, #023E8A);
+        background-size: 200% 200%;
+        animation: gradientAnimation 2s infinite linear;
+        color: #dfdfdf;
+    }
+}
+
+#game {
+    width: 25dvi;
+    height: 25dvi;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #b5c6cd;
+    border: 0.5rem solid #a0acbb;
+    border-radius: 0.5em;
+}
+
+h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 80%;
+}
+
+h3 {
+    font-size: 5em;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 0em;
+}
+
+.cover-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #9370d8;
+}
+
+#replayButton {
+    font-family: "Nunito", sans-serif;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1em;
+    letter-spacing: 0.2px;
+    color: #ffffff;
+
+    background-color: #4a08ce;
+}
+
+#replayButton:hover {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+.bottom {
+    font-size: 1rem;
+    font-weight: normal;
+
+    padding: 0.75rem 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.bottom p {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon_ig {
+    width: 30px;
+    height: 30px;
+    background-color: #e94475;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon svg,
+.icon_ig svg,
+.icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container {
+    margin-bottom: -30px;
+    padding: 1em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown button {
+    padding: 0.7em 1.5em;
+    font-size: 0.7em;
+    border: none;
+    border-radius: 0.6em;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+
+    background-color: #080808;
+    color: #ffffff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    background-color: rgba(238, 177, 197, 0.95);
+    border-radius: 0.6em;
+}
+
+.dropdown-content a {
+    padding: 0.7em 1.5em;
+    text-decoration: none;
+    display: block;
+
+    color: #000000;
+    font-size: 0.7em;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 0.6em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    bottom: 100%;
+}
+
+.tile {
+    width: 25%;
+    height: 25%;
+    border: 0.5vmin solid #a0acbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vmin;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/*colours for each tile*/
+
+.t2 {
+    background-color: #4cc9f0;
+    color: #000000;
+}
+
+.t4 {
+    background-color: #05b2dc;
+    color: #000000;
+}
+
+.t8 {
+    background-color: #4895ef;
+    color: #000000;
+}
+
+.t16 {
+    background-color: #4361ee;
+    color: #000000;
+}
+
+.t32 {
+    background-color: #3f37c9;
+    color: #ffffff;
+}
+
+.t64 {
+    background-color: #3a0ca3;
+    color: #ffffff;
+}
+
+.t128 {
+    background-color: #480ca8;
+    color: #ffffff;
+}
+
+.t256 {
+    background-color: #560bad;
+    color: #ffffff;
+}
+
+.t512 {
+    background-color: #7209b7;
+    color: #ffffff;
+}
+
+.t1024 {
+    background-color: #b5179e;
+    color: #ffffff;
+}
+
+.t2048 {
+    background-color: #f72585;
+    color: #000000;
+}
+
+.t4096 {
+    background-color: #f26a8d;
+    color: #000000;
+}
+
+.t8192 {
+    background-color: #f49cbb;
+    color: #000000;
+}
