@@ -1,8 +1,15 @@
+/**
+ * @file 2048.js
+ * @author Rongbin Gu @rongbin99)
+ */
+
 //initializing global variables
 var board;
 var score = 0;
 const rows = 4;
 const columns = 4;
+let previousBoard;
+
 //starting function
 window.onload = function() {
     startGame();
@@ -30,11 +37,33 @@ function startGame() {
     spawnTwo();
     spawnTwo();
 }
-//places a 2 on the board randomly
+
+// clones the current state of the board
+function cloneBoard(input) {
+    return input.map(row => row.slice());
+}
+
+// checks if the board has changed
+function boardsEqual(board1, board2) {
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board1[r][c] !== board2[r][c]) {
+                return false; // found an index that is different
+            }
+        }
+    }
+    return true; // otherwise return true
+}
+
+// places a 2 on the board randomly
 function spawnTwo() {
     if (boardFull()) {
         gameLost();
-        return; //do nothing
+        return; // do nothing
+    }
+
+    if (previousBoard && boardsEqual(previousBoard, board)) {
+        return; // do nothing (no spawing of 2's)
     }
   
     let empty = true;
@@ -51,7 +80,10 @@ function spawnTwo() {
             empty = false;
         }
     }
+    // store the current state of the board
+    previousBoard = cloneBoard(board); 
 }
+
 //checks if game is lost
 function gameLost() {
     if (!possibleMovesCheck()) {//if no more moves, must be lost
@@ -73,6 +105,7 @@ function boardFull() {
     }
     return true;
 }
+
 //updates text and stlying of the tile
 function updateTile(tile, number) {
     tile.innerText = "";
