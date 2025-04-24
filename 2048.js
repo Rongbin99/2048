@@ -1,6 +1,6 @@
 /**
  * @file 2048.js
- * @author Rongbin Gu @rongbin99)
+ * @author Rongbin Gu (@rongbin99)
  */
 
 //initializing global variables
