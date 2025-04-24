@@ -26,7 +26,7 @@ Available themes (for now):
 
 ## Contact
 
-For inquires, feel free to reach out to me on Discord ([my Discord server link](discord.gg/3ExWbX2AXf)) or via email gu.rongbin99@gmail.com. *(serious inquires only pls)*
+For inquiries, feel free to reach out to me on Discord ([my Discord server link](discord.gg/3ExWbX2AXf)) or via email gu.rongbin99@gmail.com. *(serious inquires only pls)*
 
 ## Contributing
 
