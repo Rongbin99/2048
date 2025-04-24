@@ -3,7 +3,7 @@
 body {
     background-color: #9370d8;
     font-family: "Nunito", sans-serif;
-    font-size: 24px;
+    font-size: 1.5em;
     line-height: normal;
     font-weight: bolder;
     padding: 5px;
@@ -11,25 +11,25 @@ body {
 }
 
 #game {
-    width: 500px;
-    height: 500px;
+    width: 25dvi;
+    height: 25dvi;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 
     background-color: #b5c6cd;
-    border: 6px solid #a0acbb;
+    border: 0.5rem solid #a0acbb;
     border-radius: 0.5em;
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: bold;
     line-height: 80%;
 }
 
 h3 {
-    font-size: 3em;
+    font-size: 5em;
     font-weight: bolder;
     text-align: center;
     line-height: 0em;
@@ -70,13 +70,49 @@ h3 {
 }
 
 .bottom {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: normal;
-    transform: scale(0.8);
 
+    padding: 0.75rem 0;
+    line-height: 30px;
     text-align: center;
+}
+
+.bottom p {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon_ig {
+    width: 30px;
+    height: 30px;
+    background-color: #e94475;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.icon svg,
+.icon_ig svg,
+.icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .container {
@@ -133,14 +169,15 @@ h3 {
 }
 
 .tile {
-    width: 115px;
-    height: 115px;
-    border: 5px solid #a0acbb;
+    width: 25%;
+    height: 25%;
+    border: 0.5vmin solid #a0acbb;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 45px;
+    font-size: 6vmin;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 /*colours for each tile*/
