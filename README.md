@@ -34,4 +34,4 @@ For inquiries, feel free to reach out to me on Discord ([my Discord server link]
 
 ## Contributing
 
-Contributions are welcome and encouraged! Please fork the repository and create a new pull request for review by a Codeowner.
+Contributions are welcome and encouraged! Please fork the repository and create a new pull request for review and approval by a Codeowner.
